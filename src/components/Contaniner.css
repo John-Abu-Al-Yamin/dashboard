@@ -1,0 +1,150 @@
+.container {
+  width: calc(100% - 100px);
+  padding: 20px;
+  padding-top: 30px;
+  height: 100%;
+}
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topContainer .inputBox {
+  width: 320px;
+  max-width: 350px;
+  height: 45px;
+  position: relative;
+}
+.topContainer .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #19162c;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  color: #d0cfd4;
+  font-size: 16px;
+  padding: 0 40px;
+}
+.topContainer .inputBox input::placeholder {
+  color: #757380;
+}
+.topContainer .inputBox i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #757380;
+  font-size: 20px;
+  width: 40px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.topContainer .profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d0cfd4;
+  position: relative;
+}
+.profileContainer .profileIcon {
+  width: 40px;
+  height: 40px;
+  background: #19162c;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.profileContainer .profileIcon::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: #b1147d;
+  border-radius: 50%;
+}
+.profileContainer .profileImage {
+  background: red;
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.profileContainer .profileImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.profileContainer .profileName {
+  font-weight: 600;
+  font-size: 14px;
+}
+.profileContainer .menuChevron {
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+.profileContainer .menuContainer {
+  transition: all 0.3s;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  background: #19162c;
+  border-radius: 0.5em;
+  width: 180px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.profileContainer .menuContainer ul {
+  width: 100%;
+  height: 100%;
+}
+
+.profileContainer .menuContainer ul li {
+  list-style: none;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.profileContainer .menuContainer ul li:hover {
+  background: #121026;
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 650px) {
+  .topContainer .inputBox {
+    width: 180px;
+    z-index: 101;
+  }
+  .topContainer .inputBox input:focus {
+    transition: all 0.3s;
+    width: 320px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .container {
+    width: calc(100% - 68px);
+  }
+  .topContainer .inputBox {
+    width: 120px;
+    z-index: 101;
+  }
+  .topContainer .inputBox input:focus {
+    transition: all 0.3s;
+    width: 300px;
+  }
+}
